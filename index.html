@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Dashboard UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .balance {
+      font-size: 48px;
+      color: #d3d3d3;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .currency-selector {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .currency-selector span {
+      color: gray;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .currency-selector span.active {
+      color: white;
+      font-weight: bold;
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .actions button {
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #b0ff57;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+    .transactions {
+      margin-top: 20px;
+    }
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+    .transaction .info {
+      display: flex;
+      flex-direction: column;
+    }
+    .transaction .info span:first-child {
+      font-weight: bold;
+    }
+    .transaction .amount {
+      text-align: right;
+    }
+    .login-screen {
+      background: #fef7f3;
+      color: #000;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .login-screen h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .login-screen p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .login-screen button {
+      padding: 12px 24px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .login-screen .signup {
+      background: #ddd;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="balance">$1324<span style="color:#888">.26</span></div>
+    <div class="currency-selector">
+      <span class="active">USD</span>
+      <span>EUR</span>
+      <span>BTC</span>
+      <span>ETH</span>
+      <span>...</span>
+    </div>
+    <div class="actions">
+      <button>Add money</button>
+      <button>Exchange</button>
+      <button>Details</button>
+      <button>More</button>
+    </div>
+    <div class="transactions">
+      <div class="transaction">
+        <div class="info">
+          <span>NVIDIA</span>
+          <span style="color: gray; font-size: 12px;">Yesterday, 1:35 PM</span>
+        </div>
+        <div class="amount">
+          <span>− $17.80</span><br>
+          <span style="font-size: 12px; color: gray;">0.05 NVDA</span>
+        </div>
+      </div>
+      <div class="transaction">
+        <div class="info">
+          <span>Tesla</span>
+          <span style="color: gray; font-size: 12px;">Sep 27, 6:21 PM</span>
+        </div>
+        <div class="amount">
+          <span>− $10 000.00</span><br>
+          <span style="font-size: 12px; color: gray;">0.12 TSLA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="login-screen">
+    <h2>Risk Ready</h2>
+    <p>Boldly risk to accelerate AI and secure a competitive edge.</p>
+    <button>Log In</button>
+    <button class="signup">Sign Up</button>
+  </div>
+</body>
+</html>
